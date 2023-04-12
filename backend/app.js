@@ -40,7 +40,7 @@ mongoose.connect(
     `mongodb+srv://<username>:<password>@<host>/<db_name>?retryWrites=true&w=majority`
 
     */
-    "mongodb+srv://billafy:billafy@mern-cluster.itf9r.mongodb.net/rides?retryWrites=true&w=majority",
+    process.env.MONGO_URI,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
