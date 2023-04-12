@@ -1,0 +1,162 @@
+nav{
+    display: flex;
+    align-items: center;
+    background: black;
+    justify-content: space-between;
+    padding: 20px 80px;
+}
+.logo{
+    font-size: 2rem; 
+}
+.logo p{
+    color: chartreuse;
+}
+ ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ li{
+    list-style: none;
+    padding: 0 20px;
+}
+ a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: 0.3 ease-in-out;
+}
+ a:hover{
+    color:chartreuse;
+}
+.logout button{
+    background-color: chartreuse;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 8px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.logout button:hover{
+    background-color:   rgb(167, 237, 96);
+}
+.responsive{
+    display: none;
+}
+.responsive button{
+    color: #fff;
+}
+.notifications-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notifications-container svg {
+    font-size: 1.5rem;
+    color: white;
+}
+.unseen {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+.notifications {
+    position: absolute;
+    max-height: 250px;
+    width: 300px;
+    right: 0px;
+    background-color: black;
+    border: 1px solid white;
+    top: 30px;
+    box-shadow: 1px 1spx 3px black;
+    border-radius: 3px;
+    transform: scaleY(0);
+    transition: 0.1s transform linear;
+    padding: 3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
+    overflow-y: auto;
+}
+.show-notifications {
+    transform: scaleY(1);
+}
+.notification-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+.notification {
+    border-radius: 3px;
+    padding: 0.5rem;
+    gap: 0.25rem;
+    display: flex;
+    flex-direction: column;
+}
+.notification p {
+    font-size: 0.85rem;
+    color: white;
+}
+.notification span {
+    color: grey;
+    font-size: 0.7rem;
+    text-align: right;
+}
+@media screen and (max-width:600px){
+    .logo{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        top: 15;
+        left: 35px;
+    }
+    .navlinks{
+        display: none;
+    }
+    .navlinks-device{
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: black;
+        color: #fff;
+        left: 0;
+        top:75px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+   
+     li{
+        color: #fff;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease-out;
+        margin-bottom: 10px;
+        
+    }
+    .responsive{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        background-color: black;
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
+    .responsive button{
+        color: #fff;
+    }
+}
+
